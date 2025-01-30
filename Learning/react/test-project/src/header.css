@@ -1,0 +1,29 @@
+.header {
+    background-color: #2d2c2c;
+    font-size: 15px;
+    color: white;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+}
+
+.header-item {
+    display: flex;
+    justify-content: space-between;
+    background-color: #2d2c2c;
+    padding: 10px;
+}
+
+.header-child {
+    font-size: 15px;
+    padding: 2px 4px;
+    color: white;
+    text-decoration: none;
+}
+
+.header-child-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}

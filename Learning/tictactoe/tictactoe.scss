@@ -1,0 +1,185 @@
+@mixin direction-button {
+    background-color: gray;
+    color: white;
+    width: 100px;
+    height: 50px;
+    align-items: start;
+    padding: 2px 4px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+}
+
+@mixin gaming-button {
+    color: white;
+    width: 100px;
+    height: 50px;
+    align-items: start;
+    padding: 2px 4px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+}
+
+#up {
+    @include direction-button;
+}
+
+#down {
+    @include direction-button;
+}
+
+#left {
+    @include direction-button;
+}
+
+#right {
+    @include direction-button;
+}
+
+.header {
+    background-color: #2d2c2c;
+    font-size: 15px;
+    color: white;
+    position: fixed;
+    top: 0;
+    padding-left: 10px;
+    z-index: 1;
+    width: 100%;
+}
+
+.center {
+    text-align: center;
+    align-items: center;
+    background-color: #b6dde5;
+    font-size: 15px;
+    color: black;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding-left: 10px;
+    font-size: 15px;
+    background-color: #2d2c2c;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    background-color: #b6dde5;
+}
+
+.screen {
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 100px;
+    width: 30%;
+    height: 50%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.gameControls {
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 50px;
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+}
+
+.game-button {
+    align-items: start;
+    background-color: #d5dadf;
+    color: black;
+    padding: 2px 4px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+}
+
+/* .control-button-parent{
+background-color: #232222;
+} */
+
+.game-button-parent {
+    align-items: start;
+    background-color: #d5dadf;
+    color: black;
+    padding: 2px 4px;
+    border-radius: 5px;
+    margin-top: 50px;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+}
+
+#cross {
+    background-color: blue;
+    @include gaming-button;
+}
+
+#circle {
+    background-color: red;
+    @include gaming-button;
+}
+
+.matrix-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#matrix {
+    display: grid;
+    grid-template-columns: repeat(3, 70px);
+    grid-gap: 10px;
+    margin: 20px;
+}
+
+.mat {
+    display: flex;
+    row-gap: 5px;
+    column-gap: 5px;
+    margin-bottom: 5px;
+    flex-direction: row;
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    background-color: #ddd;
+    border: 1px solid #aaa;
+    font-size: 20px;
+}
+
+.cell.active {
+    background-color: #4caf50;
+    color: white;
+}

@@ -1,0 +1,30 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-size: 15px;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-item {
+    display: flex;
+    justify-content: space-between;
+    background-color: #232222;
+    padding: 10px;
+}
+
+.footer-child {
+    background-color: #232222;
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.footer-child-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}

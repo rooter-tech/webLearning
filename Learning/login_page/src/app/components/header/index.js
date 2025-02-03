@@ -33,7 +33,7 @@ function Header () {
 						</a>
 
 						<button className = "sign-in-button">
-							"Sign In"
+							Sign In
 						</button>
 					</div>
 				</div>

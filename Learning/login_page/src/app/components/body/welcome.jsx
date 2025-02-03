@@ -4,7 +4,7 @@ function Welcome ( { username, handleLogout } ) {
 	return (
 		<div className = "container">
 			<h1>
-				{`Welcome ${ username.toUpperCase () }`}
+				{`Welcome ${ username }`}
 			</h1>
 
 			<button

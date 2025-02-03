@@ -11,16 +11,18 @@ function Body () {
 	const navigate                      = useNavigate ();
 	const [ username, setUsername ]     = useState ( "" );
 	const [ isLoggedIn, setIsLoggedIn ] = useState ( false );
+	const loggedIn                      = window.localStorage.getItem ( "loggedIn" );
 
 	function handleLogout () {
 		setIsLoggedIn ( false );
+		window.localStorage.removeItem ( "loggedIn" );
 	}
 
 	useEffect ( () => {
-		if ( !isLoggedIn )
+		if ( !isLoggedIn && !loggedIn )
 			return navigate ( "/login" );
 
-		navigate ( "/" );
+		navigate ( `/user/${ username }` );
 	}, [ isLoggedIn ] );
 
 	return (
@@ -35,6 +37,7 @@ function Body () {
 								username     = { username }
 							/>
 						) }
+						path     = { `/user/${ username }` }
 					/>
 
 					<Route

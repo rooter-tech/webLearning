@@ -20,6 +20,8 @@ function Login ( {
 	function loginUser ( username, password ) {
 		if ( password === "QWERTY" && username !== "" ) {
 			setIsLoggedIn ( true );
+			setUsername ( username );
+			window.localStorage.setItem ( "loggedIn", true );
 		} else if ( username === "" ) {
 			alert ( "Username cannot be empty!" );
 		} else {
